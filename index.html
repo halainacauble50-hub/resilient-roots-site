@@ -6,17 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body{
 font-family: Georgia, serif;
 margin:0;
-background:#f7f3ee;
-color:#2e2e2e;
+background:#f6f2ed;
+color:#2d2d2d;
 line-height:1.6;
-}
-
-h1,h2{
-font-family: Georgia, serif;
-margin-top:0;
 }
 
 .launch-banner{
@@ -31,7 +27,7 @@ letter-spacing:1px;
 .hero-wrap{
 max-width:1200px;
 margin:0 auto;
-padding:25px 30px 40px 30px;
+padding:35px 30px 40px 30px;
 }
 
 .top-book-section{
@@ -47,7 +43,7 @@ max-width:380px;
 border-radius:12px;
 box-shadow:0 14px 30px rgba(0,0,0,0.18);
 display:block;
-margin-top:-55px;
+margin-top:-50px;
 }
 
 .eyebrow{
@@ -55,24 +51,30 @@ letter-spacing:2px;
 font-size:13px;
 color:#7a6a5c;
 text-transform:uppercase;
-margin-bottom:10px;
+margin-bottom:8px;
 font-weight:600;
 }
 
-.top-content h1{
+h1{
 font-size:56px;
 margin-bottom:14px;
+color:#241a14;
+}
+
+h2{
+font-size:34px;
+margin-bottom:12px;
 color:#241a14;
 }
 
 .tagline{
 font-size:24px;
 margin-bottom:24px;
-max-width:700px;
+max-width:650px;
 }
 
 .hero-buttons{
-margin:25px 0 24px 0;
+margin:25px 0 25px;
 }
 
 .button{
@@ -80,7 +82,7 @@ background:#3a2e25;
 color:white;
 padding:14px 28px;
 text-decoration:none;
-margin:10px 12px 10px 0;
+margin-right:12px;
 display:inline-block;
 border-radius:6px;
 font-weight:600;
@@ -91,31 +93,14 @@ border:2px solid #3a2e25;
 color:#3a2e25;
 padding:12px 26px;
 text-decoration:none;
-margin:10px 12px 10px 0;
 display:inline-block;
 border-radius:6px;
 font-weight:600;
-background:transparent;
-}
-
-.about-label{
-font-size:14px;
-letter-spacing:2px;
-text-transform:uppercase;
-color:#7a6a5c;
-margin-bottom:8px;
-font-weight:600;
-}
-
-.about-title{
-font-size:36px;
-margin-bottom:14px;
-color:#241a14;
 }
 
 .about-text{
 font-size:20px;
-max-width:760px;
+max-width:720px;
 }
 
 .section{
@@ -124,24 +109,7 @@ margin:0 auto;
 padding:45px 30px;
 }
 
-.author-card{
-background:white;
-padding:36px;
-border-radius:12px;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-.quote-box{
-background:white;
-padding:36px;
-border-radius:12px;
-font-size:22px;
-text-align:left;
-box-shadow:0 10px 20px rgba(0,0,0,0.08);
-}
-
-.connect-box{
-text-align:center;
+.card{
 background:white;
 padding:36px;
 border-radius:12px;
@@ -149,13 +117,21 @@ box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 .excerpt-wrap{
-background:#f2ece4;
+background:#f1ece5;
 padding:35px 30px;
-max-width:1100px;
+}
+
+.excerpt-card{
+max-width:900px;
 margin:0 auto;
+background:white;
+padding:36px;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,0.08);
 }
 
 @media(max-width:900px){
+
 .top-book-section{
 grid-template-columns:1fr;
 gap:30px;
@@ -170,26 +146,20 @@ margin:0 auto;
 max-width:320px;
 }
 
-.top-content{
-text-align:center;
-}
-
-.top-content h1{
-font-size:42px;
+h1{
+font-size:40px;
 }
 
 .tagline{
 font-size:20px;
-margin-left:auto;
-margin-right:auto;
 }
 
 .about-text{
 font-size:18px;
-margin-left:auto;
-margin-right:auto;
 }
+
 }
+
 </style>
 </head>
 
@@ -200,13 +170,14 @@ Now Launching — Resilient Roots
 </div>
 
 <section class="hero-wrap">
+
 <div class="top-book-section">
 
 <div class="book-cover">
 <img src="cover.png" alt="Resilient Roots book cover">
 </div>
 
-<div class="top-content">
+<div>
 
 <div class="eyebrow">A Memoir by Halaina Cauble</div>
 
@@ -217,75 +188,93 @@ A memoir of survival, faith, and the courage to begin again.
 </p>
 
 <div class="hero-buttons">
+
 <a class="button" href="#">Buy on Amazon (Coming Soon)</a>
-<a class="button-outline" href="https://facebook.com/HalainaCauble" target="_blank">Follow Halaina on Facebook</a>
+
+<a class="button-outline"
+href="https://facebook.com/HalainaCauble"
+target="_blank">
+Follow Halaina on Facebook
+</a>
+
 </div>
 
-<div class="about-label">About the Book</div>
+<div class="eyebrow">About the Book</div>
 
-<h2 class="about-title">The Story Behind Resilient Roots</h2>
+<h2>The Story Behind Resilient Roots</h2>
 
 <p class="about-text">
 Resilient Roots traces a journey of survival, faith, family, and the courage to begin again. From childhood in Ramallah to rebuilding life in the United States, Halaina Cauble tells a story of loss, resilience, and the quiet strength it takes to reclaim your life.
 </p>
 
 </div>
+
 </div>
+
 </section>
 
+
 <section class="section">
-<div class="author-card">
+
+<div class="card">
+
 <div class="eyebrow">Praise for Resilient Roots</div>
+
 <h2>Early Praise</h2>
+
 <p>“A deeply personal story of faith, survival, and reclaiming strength.”</p>
+
 <p>“Honest, heartfelt, and full of hard-won resilience.”</p>
+
 <p>“A moving memoir about what it means to endure and rebuild.”</p>
+
 </div>
+
 </section>
+
 
 <div class="excerpt-wrap">
-<section class="section">
-<div class="quote-box">
-  <section class="section">
-<div class="author-card">
-<div class="eyebrow">Praise for Resilient Roots</div>
-<h2>Early Praise</h2>
 
-<p>“A deeply personal story of faith, survival, and reclaiming strength.”</p>
+<div class="excerpt-card">
 
-<p>“Honest, heartfelt, and full of hard-won resilience.”</p>
-
-<p>“A moving memoir about what it means to endure and rebuild.”</p>
-
-</div>
-</section>
 <div class="eyebrow">Read an Excerpt</div>
+
 <h2>Opening Ground</h2>
+
 <p>A boy pressed his ear to the door.</p>
+
 <p>“How are we supposed to feed another mouth?”</p>
+
 <p>Inside, Yamma measured water into a chipped cup, careful not to spill. She tipped the rice tin and shook it once, then again, listening for what remained.</p>
+
 <p>I was born into a house that already knew how to be careful—food rationed, space shared. Nothing was wasted. Not water. Not bread. Not movement.</p>
+
 <p><em>Continue the journey in Resilient Roots.</em></p>
-</div>
-</section>
+
 </div>
 
+</div>
+
+
 <section class="section">
-<div class="author-card">
+
+<div class="card">
+
 <div class="eyebrow">About the Author</div>
+
 <h2>Halaina Cauble</h2>
+
 <p>
 Halaina Cauble is the author of Resilient Roots, a literary memoir tracing her journey from survival to self-reclamation. A mother of four, entrepreneur, and salon owner, she rebuilt her life after abuse, betrayal, financial loss, and displacement—emerging not hardened, but grounded.
 </p>
+
 <p>
 She lives in South Carolina, where she continues to write, travel, and build spaces rooted in connection and strength.
 </p>
+
 </div>
+
 </section>
 
 </body>
 </html>
-
-
-
-

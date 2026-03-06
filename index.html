@@ -6,171 +6,305 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-body{
-font-family: Georgia, serif;
-margin:0;
-background:#fafafa;
-color:#222;
-line-height:1.6;
+* {
+  box-sizing: border-box;
 }
 
-header{
-background:#1c1c1c;
-color:white;
-padding:40px;
-text-align:center;
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #f6f1ea;
+  color: #2b2118;
+  line-height: 1.7;
 }
 
-header h1{
-margin:0;
-font-size:42px;
+.hero {
+  background: linear-gradient(rgba(28,28,28,0.75), rgba(28,28,28,0.75)), url('cover.png') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 120px 20px 100px;
 }
 
-header p{
-font-size:18px;
-opacity:.8;
+.hero h1 {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
 }
 
-section{
-max-width:900px;
-margin:auto;
-padding:50px 20px;
+.hero p {
+  max-width: 760px;
+  margin: 22px auto 0;
+  font-size: 22px;
+  color: rgba(255,255,255,0.92);
 }
 
-.book{
-display:flex;
-gap:40px;
-align-items:center;
-flex-wrap:wrap;
+.hero-buttons {
+  margin-top: 35px;
 }
 
-.book img{
-width:260px;
-border-radius:6px;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+.button,
+.button-outline {
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s ease;
 }
 
-.button{
-display:inline-block;
-background:black;
-color:white;
-padding:12px 22px;
-text-decoration:none;
-margin-top:15px;
-border-radius:4px;
+.button {
+  background: #c8a96b;
+  color: #1c1c1c;
+  font-weight: bold;
 }
 
-.button:hover{
-background:#444;
+.button:hover {
+  background: #b89250;
 }
 
-.quote{
-background:white;
-padding:30px;
-border-left:4px solid #333;
-font-style:italic;
+.button-outline {
+  border: 1px solid rgba(255,255,255,0.75);
+  color: white;
 }
 
-footer{
-background:#1c1c1c;
-color:white;
-text-align:center;
-padding:30px;
-font-size:14px;
+.button-outline:hover {
+  background: rgba(255,255,255,0.12);
 }
 
+.section {
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 24px;
+}
+
+.book-layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.book-cover {
+  flex: 1 1 320px;
+  text-align: center;
+}
+
+.book-cover img {
+  width: 100%;
+  max-width: 340px;
+  border-radius: 10px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.18);
+}
+
+.book-text {
+  flex: 1 1 500px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  color: #8a6b44;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 18px;
+  line-height: 1.2;
+  color: #20160f;
+}
+
+.book-text p,
+.author-card p,
+.connect-box p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.highlight-strip {
+  background: #e8ddd0;
+  border-top: 1px solid #d7c6b2;
+  border-bottom: 1px solid #d7c6b2;
+}
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.highlight-box {
+  background: rgba(255,255,255,0.55);
+  padding: 28px 24px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #3a291c;
+}
+
+.author-card {
+  background: white;
+  padding: 38px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.quote-box {
+  background: #fffaf4;
+  border-left: 5px solid #8a6b44;
+  padding: 34px 30px;
+  font-size: 26px;
+  font-style: italic;
+  color: #3a2b1f;
+  border-radius: 8px;
+}
+
+.connect-box {
+  background: #2a211a;
+  color: white;
+  text-align: center;
+  padding: 55px 30px;
+  border-radius: 14px;
+}
+
+.connect-box h2 {
+  color: white;
+}
+
+.connect-box p {
+  color: rgba(255,255,255,0.86);
+}
+
+footer {
+  background: #16120f;
+  color: rgba(255,255,255,0.8);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .hero h1 {
+    font-size: 46px;
+  }
+
+  .hero p {
+    font-size: 19px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+
+  .book-text p,
+  .author-card p,
+  .connect-box p {
+    font-size: 18px;
+  }
+
+  .highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-box {
+    font-size: 22px;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
-<header>
+<section class="hero">
+  <h1>Resilient Roots</h1>
+  <p>A powerful memoir of survival, faith, family, and the courage to begin again.</p>
 
-<h1>Resilient Roots</h1>
-<p>A memoir by Halaina Cauble</p>
-
-</header>
-
-<section>
-
-<div class="book">
-
-<img src="cover.png">
-
-<div>
-
-<h2>About the Book</h2>
-
-<p>
-Resilient Roots is a powerful memoir about survival, faith, family, and the courage to begin again.
-From childhood in Ramallah to rebuilding life in the United States, Halaina Cauble tells a story of
-loss, resilience, and the quiet strength it takes to reclaim your life.
-</p>
-
-<a class="button" href="#">Buy on Amazon</a>
-
-</div>
-
-</div>
-
+  <div class="hero-buttons">
+    <a class="button" href="#">Buy on Amazon</a>
+    <a class="button-outline" href="#about-book">Read More</a>
+  </div>
 </section>
 
-<section>
+<section class="section" id="about-book">
+  <div class="book-layout">
+    <div class="book-cover">
+      <img src="cover.png" alt="Resilient Roots book cover">
+    </div>
 
-<h2>About the Author</h2>
+    <div class="book-text">
+      <div class="eyebrow">Literary Memoir</div>
+      <h2>About the Book</h2>
 
-<p>
+      <p>Resilient Roots is a powerful memoir about survival, faith, family, and the courage to begin again. From childhood in Ramallah to rebuilding life in the United States, Halaina Cauble tells a story of loss, resilience, and the quiet strength it takes to reclaim your life.</p>
 
-Halaina Cauble is the author of Resilient Roots, a literary memoir tracing her journey from survival
-to self-reclamation. A mother of four, entrepreneur, and salon owner, she rebuilt her life after abuse,
-betrayal, financial loss, and displacement—emerging not hardened, but grounded.
+      <p>Written with honesty, warmth, and hard-won clarity, this is a story for readers who believe broken ground can still grow something beautiful.</p>
 
-She lives in South Carolina, where she continues to write, travel, and build spaces rooted in
-connection and strength.
-
-</p>
-
+      <a class="button" href="#">Buy on Amazon</a>
+    </div>
+  </div>
 </section>
 
-<section>
+<section class="section highlight-strip">
+  <div class="highlight-grid">
+    <div class="highlight-box">
+      <h3>Survival</h3>
+      <p>A story shaped by hardship, endurance, and the will to keep going.</p>
+    </div>
 
-<h2>Excerpt</h2>
+    <div class="highlight-box">
+      <h3>Faith</h3>
+      <p>A journey rooted in grace, healing, and the search for steadiness.</p>
+    </div>
 
-<div class="quote">
-
-“Beneath the hum of hairdryers in my Myrtle Beach salon, the words
-‘Tell me your story’ aren’t just a greeting—they’re a ritual.”
-
-</div>
-
+    <div class="highlight-box">
+      <h3>Reclamation</h3>
+      <p>A memoir about rebuilding a life and reclaiming your voice.</p>
+    </div>
+  </div>
 </section>
 
-<section>
+<section class="section">
+  <div class="author-card">
+    <div class="eyebrow">About the Author</div>
+    <h2>Halaina Cauble</h2>
 
-<h2>Stay Connected</h2>
+    <p>Halaina Cauble is the author of Resilient Roots, a literary memoir tracing her journey from survival to self-reclamation. A mother of four, entrepreneur, and salon owner, she rebuilt her life after abuse, betrayal, financial loss, and displacement—emerging not hardened, but grounded.</p>
 
-<p>
-Follow updates, book signings, and events.
-</p>
- 
-<p>
+    <p>She lives in South Carolina, where she continues to write, travel, and build spaces rooted in connection and strength.</p>
+  </div>
+</section>
 
-<a class="button" href="#">Facebook</a>
-<a class="button" href="#">Instagram</a>
+<section class="section">
+  <div class="quote-box">
+    “Beneath the hum of hairdryers in my Myrtle Beach salon, the words ‘Tell me your story’ aren’t just a greeting—they’re a ritual.”
+  </div>
+</section>
 
-</p>
+<section class="section">
+  <div class="connect-box">
+    <div class="eyebrow">Stay Connected</div>
+    <h2>Follow the Journey</h2>
+    <p>Follow updates, book signings, launch news, and upcoming events for Resilient Roots.</p>
 
+    <a class="button" href="#">Facebook</a>
+    <a class="button" href="#">Instagram</a>
+  </div>
 </section>
 
 <footer>
-
-© 2026 Halaina Cauble • ARS Publications
-
+  © 2026 Halaina Cauble • ARS Publications
 </footer>
 
 </body>
 </html>
-
-

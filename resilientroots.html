@@ -58,10 +58,25 @@ box-shadow:0 8px 20px rgba(0,0,0,.08);
 margin-top:40px;
 }
 
-@media(max-width:900px){
-.hero{
-grid-template-columns:1fr;
+@media (max-width:700px) {
+
+nav {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding:15px !important;
 }
+
+nav a {
+    display:block;
+    margin:0 !important;
+    font-size:16px;
+}
+
+.hero {
+    grid-template-columns:1fr;
+}
+
 }
 </style>
 </head>

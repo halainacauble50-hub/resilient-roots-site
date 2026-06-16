@@ -120,7 +120,7 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg
       if (!cols[4] || cols[4].trim().toUpperCase() !== 'YES') return;
 
       const name = cols[1] || '';
-     const review = cols.slice(3, cols.length - 1).join(',');
+    const review = cols[3] || '';
 
       container.innerHTML += `
         <div class="review-card">

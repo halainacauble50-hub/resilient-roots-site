@@ -117,10 +117,10 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg
     rows.forEach(row => {
       const cols = row.split(',');
 
-      if (!cols[4] || cols[4].trim().toUpperCase() !== 'YES') return;
+      if (!row.includes(',YES')) return;
 
       const name = cols[1] || '';
-    const review = cols[3] || '';
+    const review = cols.slice(3, -1).join(',');
 
       container.innerHTML += `
         <div class="review-card">

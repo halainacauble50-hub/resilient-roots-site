@@ -124,7 +124,7 @@ const cols = row.split(',');
 if (!row.includes(',YES')) return;
 
 const name = cols[1] || '';
-const review = cols.slice(3).join(',');
+const review = cols.slice(3, -1).join(',').replace(/,YES$/, '');
  console.log(review);
 
       container.innerHTML += `

@@ -108,7 +108,7 @@ header h1 {
 
 </div>
 <script>
-fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg4oxWBegxl4M3_1VTuWMGa5ubLTTh8c8vpKRdOwAeA1hJsB_wPvpb07/pub?output=csv')
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg4oxWBegxl4M3_1VTuWMGa5ubLTTh8c8vpKRdOwAeA1hJsB_wPvpb07/pub?gid=127253048&single=true&output=csv')
   .then(response => response.text())
   .then(data => {
     const rows = data.split('\n').slice(1);

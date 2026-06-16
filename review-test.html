@@ -117,12 +117,14 @@ fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg
 rows.forEach(row => {
     console.log(row);
 
-    const cols = row.split(',');
 
-    if (!row.includes('YES')) return;
+
+const cols = row.split(',');
+
+if (!row.includes(',YES')) return;
 
 const name = cols[1] || '';
-const review = cols.slice(3).join(',').replace(/,?YES\s*$/, '');
+const review = cols.slice(3, -1).join(',');
 
       container.innerHTML += `
         <div class="review-card">

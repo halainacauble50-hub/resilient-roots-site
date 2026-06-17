@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Books | Halaina</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #f6f3ee;
+    color: #2d241c;
+}
+
+header {
+    background: #241a14;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.book-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.book {
+    text-align: center;
+    width: 220px;
+}
+
+.book img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    transition: transform .2s ease;
+}
+
+.book img:hover {
+    transform: scale(1.03);
+}
+
+.book-title {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.button {
+    display: inline-block;
+    background: #8a6f4d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Books by Halaina</h1>
+</header>
+
+<div class="container">
+
+    <p class="intro">
+        Click any book cover to learn more.
+    </p>
+
+    <div class="book-grid">
+
+    </div>
+
+    <div style="text-align:center;">
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+
+</div>
+
+</body>
+</html>

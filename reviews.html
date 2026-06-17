@@ -1,4 +1,6 @@
-  <!DOCTYPE html>
+ 
+
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -90,104 +92,9 @@ header h1 {
      target="_blank">
      Share Your Review
   </a>
-</div>
-<div class="review-card">
 
-  <div class="reviewer" style="text-align:center;">
-    Kathy Johnson
-  </div>
-
-  <div class="review-text">
-    "Wow! What a story of struggle and perseverance despite many challenges. Quite interesting to read and hooks you from the start!"
-  </div>
-
-  <div class="stars" style="text-align:center;">
-    ★★★★★ 5.0 Rating
-  </div>
-
-</div>
-  
-<div class="review-card">
-
-  <div class="reviewer" style="text-align:center;">
-    Laura Knotts-Stoll
-</div>
-
-    <div class="review-text">
-        "Every once in a while you read a book that captures your heart from the very first page and refuses to let go.
-
-        This is one of those books.
-
-        Her writing is honest, emotional, and deeply engaging. I found myself completely invested in her story, feeling every loss, every fear, every setback, and every victory.
-
-        I could not put it down, and I highly recommend it to anyone who enjoys true stories of courage, perseverance, and triumph.
-
-        Trust me... this is a book you need to read."
-    </div>
-
-   <div class="stars" style="text-align:center;">
-        ★★★★★ 5.0 Rating
-    </div>
-
-</div>
-   <div class="review-card">
-
-    <div class="reviewer" style="text-align:center;">
-        Stella Allen
-    </div>
-
-    <div class="review-text" style="text-align:center;">
-        "The book was well put together and was quite some experience that Halaina had to deal with.
-        She has really made something of her life and has to be very proud of how far she has come
-        after living through all of those experiences. Everyone should get a copy of this book and
-        see how well Halaina has told her life's story."
-    </div>
-
-    <div class="stars" style="text-align:center;">
-        ★★★★★ 5.0 Rating
-    </div>
-
-</div>
-
-   <div style="text-align:center;">
-<div class="review-card">
-    <div class="reviewer">Donna King</div>
-
-    <div class="review-text">
-        “I couldn't put this book down. I finished it in two days. A powerful story of resilience, faith, and perseverance.”
-    </div>
-
-    <div class="stars">★★★★★ 5.0 Rating</div>
-</div>
-
-<div class="review-card">
-    <div class="reviewer">Carmen Bantugan</div>
-
-    <div class="review-text">
-        “An inspiring memoir filled with strength, hope, and honesty. The story stayed with me long after I finished reading.”
-    </div>
-
-    <div class="stars">★★★★★ 5.0 Rating</div>
-</div>
-
-<div class="review-card">
-    <div class="reviewer">Kathy Maloney</div>
-
-    <div class="review-text">
-        “A true page-turner. Beautifully written, deeply personal, and impossible to forget.”
-    </div>
-
-    <div class="stars">★★★★★ 5.0 Rating</div>
-</div>
-
-<div class="review-card">
-    <div class="reviewer">Gloria G.</div>
-
-    <div class="review-text">
-        “This book is heart-wrenching and relatable. I couldn't put it down even though I was tired.”
-    </div>
-
-    <div class="stars">★★★★★ 5.0 Rating</div>
+<div id="reviews-container"></div>
+ 
 </div>
     <a href="index.html" class="button">
         Back to Main Website
@@ -200,6 +107,43 @@ header h1 {
 </div>
 
 </div>
+<script>
+fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQHezbJfrgg3-vZ6nN8AYUWfg4oxWBegxl4M3_1VTuWMGa5ubLTTh8c8vpKRdOwAeA1hJsB_wPvpb07/pub?gid=127253048&single=true&output=csv')
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.split('\n').slice(1);
+    const container = document.getElementById('reviews-container');
 
+rows.forEach(row => {
+
+
+
+
+const cols = row.split(',');
+
+if (!row.includes(',YES')) return;
+
+const name = cols[1] || '';
+const review = cols.slice(3, -1).join(',').replace(/,YES$/, '');
+ 
+
+      container.innerHTML += `
+        <div class="review-card">
+          <div class="reviewer" style="text-align:center;">
+            ${name}
+          </div>
+
+          <div class="review-text">
+            ${review}
+          </div>
+
+          <div class="stars" style="text-align:center;">
+            ★★★★★ 5.0 Rating
+          </div>
+        </div>
+      `;
+    });
+  });
+</script>
 </body>
 </html>

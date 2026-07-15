@@ -185,12 +185,39 @@ box-sizing:border-box;
       .about-text {
     font-size: 18px;
 }
+}  /* closes the @media section */
+
+.navbar {
+    background: #2b1d16;
+    padding: 18px 0;
+    text-align: center;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color .3s;
+}
+
+.navbar nav a:hover {
+    color: #d8b98c;
+}
 
 </style>
 </head>
 
 <body>
 
+<div class="navbar">
 <nav>
     <a href="index.html">Home</a>
     <a href="books.html">Books</a>
@@ -200,6 +227,7 @@ box-sizing:border-box;
     <a href="events.html">Upcoming Events</a>
     <a href="contact.html">Contact</a>
 </nav>
+</div>
 
 
 

@@ -247,29 +247,26 @@ nav a {
 
 @keyframes turntable{
 
-    0%{
+    0%,10%{
         transform:rotateY(0deg);
     }
 
-    20%{
+    25%,45%{
+        transform:rotateY(-35deg);
+    }
+
+    50%{
         transform:rotateY(0deg);
     }
 
-    35%{
-        transform:rotateY(-14deg);
-    }
-
-    55%{
-        transform:rotateY(-14deg);
-    }
-
-    75%{
-        transform:rotateY(0deg);
+    65%,85%{
+        transform:rotateY(35deg);
     }
 
     100%{
         transform:rotateY(0deg);
     }
+
 }
 </style>
 </head>

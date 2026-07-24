@@ -129,27 +129,27 @@ header {
     border-radius: 6px;
     margin-top: 40px;
 }
-  /* ---------- Featured Book ---------- */
+ /* ---------- Featured Book ---------- */
 
-.book-cover{
+.book{
     perspective:1200px;
 }
 
-.book-cover img{
+.book img{
     transition:transform .35s ease, box-shadow .35s ease;
     border-radius:8px;
 }
 
 /* Hover for ALL books */
 
-.book-cover img:hover{
+.book img:hover{
     transform:translateY(-10px) scale(1.05);
     box-shadow:0 20px 40px rgba(0,0,0,.30);
 }
 
 /* Only the featured book animates */
 
-.book-cover.featured img{
+.book.featured img{
     animation:featuredTurn 8s ease-in-out infinite;
     transform-style:preserve-3d;
 }
@@ -157,19 +157,19 @@ header {
 @keyframes featuredTurn{
 
     0%,10%{
-        transform:rotateY(0deg) scale(1.08);
+        transform:rotateY(0deg);
     }
 
     25%,45%{
-        transform:rotateY(-35deg) scale(1.08);
+        transform:rotateY(-35deg);
     }
 
     60%,80%{
-        transform:rotateY(35deg) scale(1.08);
+        transform:rotateY(35deg);
     }
 
     100%{
-        transform:rotateY(0deg) scale(1.08);
+        transform:rotateY(0deg);
     }
 
 }
@@ -199,7 +199,7 @@ header {
 
     <div class="book-grid">
 
-<div class="book-cover featured">
+<div class="book featured">
     <a href="resilientroots.html">
        <img src="Resilient Roots.jpg" alt="Resilient Roots">
     </a>

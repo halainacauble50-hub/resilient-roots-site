@@ -233,7 +233,27 @@ nav a {
 .navbar nav a:hover {
     color: #d8b98c;
 }
+/* Cinematic floating book */
+.book-cover img{
+    animation: floatBook 6s ease-in-out infinite;
+    transition: transform .4s ease;
+}
 
+.book-cover img:hover{
+    transform: scale(1.03);
+}
+
+@keyframes floatBook{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
 </style>
 </head>
 

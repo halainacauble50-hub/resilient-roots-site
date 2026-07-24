@@ -129,6 +129,50 @@ header {
     border-radius: 6px;
     margin-top: 40px;
 }
+  /* ---------- Featured Book ---------- */
+
+.book-cover{
+    perspective:1200px;
+}
+
+.book-cover img{
+    transition:transform .35s ease, box-shadow .35s ease;
+    border-radius:8px;
+}
+
+/* Hover for ALL books */
+
+.book-cover img:hover{
+    transform:translateY(-10px) scale(1.05);
+    box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+
+/* Only the featured book animates */
+
+.book-cover.featured img{
+    animation:featuredTurn 8s ease-in-out infinite;
+    transform-style:preserve-3d;
+}
+
+@keyframes featuredTurn{
+
+    0%,10%{
+        transform:rotateY(0deg) scale(1.08);
+    }
+
+    25%,45%{
+        transform:rotateY(-35deg) scale(1.08);
+    }
+
+    60%,80%{
+        transform:rotateY(35deg) scale(1.08);
+    }
+
+    100%{
+        transform:rotateY(0deg) scale(1.08);
+    }
+
+}
 </style>
 </head>
 

@@ -131,6 +131,24 @@ header h1 {
 .button:hover {
     opacity: 0.9;
 }
+
+
+.click-note{
+    text-align:center;
+    font-size:.95rem;
+    margin:10px 0 0;
+    color:#8a6f4d;
+    font-weight:bold;
+}
+
+.event-image{
+    cursor:pointer;
+    transition:transform .25s ease;
+}
+
+.event-image:hover{
+    transform:scale(1.02);
+} 
 </style>
 
 </head>
@@ -154,12 +172,14 @@ header h1 {
 
     <div class="event-card">
 
-        <img
-            src="barnes-noble-signing.jpg"
-            alt="Barnes & Noble Book Signing with Halaina"
-            class="event-image"
-        >
-
+       <a href="barnes-noble-signing.jpg" target="_blank">
+    <img
+        src="barnes-noble-signing.jpg"
+        alt="Barnes & Noble Book Signing with Halaina"
+        class="event-image"
+    >
+</a>
+<p class="click-note">🔍 Click image to enlarge</p>
         <p>
             <strong>
                 Signed copies of <em>Resilient Roots</em> will be available
@@ -172,12 +192,14 @@ header h1 {
 
     <div class="event-card">
 
-        <img
-            src="book-club.jpg"
-            alt="Private Book Club Discussion with Halaina"
-            class="event-image"
-        >
-
+      <a href="book-club.jpg" target="_blank">
+    <img
+        src="book-club.jpg"
+        alt="Private Book Club Discussion with Halaina"
+        class="event-image"
+    >
+</a>
+<p class="click-note">🔍 Click image to enlarge</p>
         <p>
             Halaina has been invited to discuss <em>Resilient Roots</em> with a
             private book club, sharing the story behind the memoir, the writing

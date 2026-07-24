@@ -108,9 +108,25 @@ nav a{
 }
 
 .author img{
-    width:240px;
-    border-radius:12px;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    width:260px;
+    border-radius:14px;
+
+    padding:6px;
+    background:#f8f4ed;
+    border:1px solid  #d4b483;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.22),
+        0 0 0 1px rgba(255,255,255,.75);
+
+    transition:all .35s ease;
+}
+
+.author img:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:
+        0 22px 45px rgba(0,0,0,.28),
+        0 0 0 1px rgba(255,255,255,.9);
 }
 
 .author-text{

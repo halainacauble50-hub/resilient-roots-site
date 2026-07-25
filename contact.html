@@ -82,7 +82,7 @@ header{
     background:#3a2e25;
     color:white;
     text-align:center;
-    padding:40px;
+    padding:15px 20px;
 }
 
 .container{
@@ -123,17 +123,25 @@ header{
 }
 
 header {
-    padding: 28px 20px;
+    background:#3a2e25;
+    color:white;
+    text-align:center;
+    padding:12px 20px;
 }
 
-@media (max-width: 800px) {
+header h1 {
+    margin:8px 0;
+    font-size:2.1rem;
+}
+
+@media (max-width:800px) {
     .contact-columns {
-        display: block;
+        display:block;
     }
 
     .contact-info {
-        width: 100%;
-        margin-bottom: 30px;
+        width:100%;
+        margin-bottom:30px;
     }
 }
 </style>
@@ -164,20 +172,30 @@ header {
   <div class="contact-columns">
 
 <div class="contact-info">
-<h2>Email</h2>
 
-<p>
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@halaina.com" target="_blank" rel="noopener">
-    contact@halaina.com
-</a>
-</p>
+<h2>Contact Information</h2>
 
-<h2>Phone</h2>
+<div style="display:flex; gap:35px; flex-wrap:wrap;">
 
-<p>
-<a href="tel:8439070755">(843) 907-0755</a>
-</p>
-  </div>
+    <div>
+        <h3 style="margin-bottom:8px;">Email</h3>
+        <p style="margin-top:0;">
+            <a href="mailto:contact@halaina.com">
+                contact@halaina.com
+            </a>
+        </p>
+    </div>
+
+    <div>
+        <h3 style="margin-bottom:8px;">Phone</h3>
+        <p style="margin-top:0;">
+            <a href="tel:8439070755">(843) 907-0755</a>
+        </p>
+    </div>
+
+</div>
+
+</div>
 
 <div class="contact-form">
 <h2 style="margin-top:35px;">Send Me a Message</h2>

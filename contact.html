@@ -107,7 +107,35 @@ header{
     border-radius:6px;
     margin-top:25px;
 }
+.contact-columns {
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+}
 
+.contact-info {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+header {
+    padding: 28px 20px;
+}
+
+@media (max-width: 800px) {
+    .contact-columns {
+        display: block;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
 </style>
 </head>
 

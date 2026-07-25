@@ -148,7 +148,77 @@ header{
 <p>
 <a href="tel:8439070755">(843) 907-0755</a>
 </p>
+<h2 style="margin-top:35px;">Send Me a Message</h2>
 
+<form action="https://formsubmit.co/contact@halaina.com" method="POST">
+
+    <input type="hidden" name="_subject" value="New message from Halaina.com">
+    <input type="hidden" name="_captcha" value="false">
+
+    <div style="display:flex; gap:15px; flex-wrap:wrap;">
+
+        <div style="flex:1; min-width:220px;">
+            <label for="first-name"><strong>First Name</strong></label>
+            <input
+                type="text"
+                id="first-name"
+                name="First Name"
+                required
+                style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #c9b8a8; border-radius:6px; box-sizing:border-box;">
+        </div>
+
+        <div style="flex:1; min-width:220px;">
+            <label for="last-name"><strong>Last Name</strong></label>
+            <input
+                type="text"
+                id="last-name"
+                name="Last Name"
+                required
+                style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #c9b8a8; border-radius:6px; box-sizing:border-box;">
+        </div>
+
+    </div>
+
+    <label for="email"><strong>Email</strong></label>
+    <input
+        type="email"
+        id="email"
+        name="Email"
+        required
+        style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #c9b8a8; border-radius:6px; box-sizing:border-box;">
+
+    <label for="subject"><strong>Subject</strong></label>
+    <select
+        id="subject"
+        name="Subject"
+        required
+        style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #c9b8a8; border-radius:6px; box-sizing:border-box; background:white;">
+
+        <option value="">Choose a subject</option>
+        <option value="Book Club">Book Club</option>
+        <option value="Book Signing">Book Signing</option>
+        <option value="Speaking Engagement">Speaking Engagement</option>
+        <option value="Media or Podcast Interview">Media or Podcast Interview</option>
+        <option value="General Question">General Question</option>
+
+    </select>
+
+    <label for="message"><strong>Message</strong></label>
+    <textarea
+        id="message"
+        name="Message"
+        rows="6"
+        required
+        style="width:100%; padding:12px; margin:8px 0 18px; border:1px solid #c9b8a8; border-radius:6px; box-sizing:border-box; resize:vertical;"></textarea>
+
+    <button
+        type="submit"
+        class="button"
+        style="border:none; cursor:pointer;">
+        Send Message
+    </button>
+
+</form>
 <a class="button" href="books.html">
 Browse My Books
 </a>

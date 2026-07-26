@@ -47,7 +47,7 @@ header h1{
 }
 
 .container{
-    max-width:800px;
+    max-width:1000px;
     margin:50px auto;
     background:white;
     padding:40px;
@@ -79,13 +79,19 @@ input,
 select,
 textarea{
     width:100%;
+    box-sizing:border-box;
     padding:14px;
+    margin-bottom:22px;
     font-size:1rem;
     font-family:Georgia, serif;
-    border:1px solid #c9b79c;
-    border-radius:8px;
-    box-sizing:border-box;
+    border:1px solid #d5c8b8;
+    border-radius:6px;
     background:white;
+}
+
+textarea{
+    min-height:220px;
+    resize:vertical;
 }
 
 textarea{

@@ -117,7 +117,25 @@ textarea{
     width:auto;
     transform:translateY(4px);
 }
+.inline-field{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:18px;
+}
 
+.inline-field label{
+    width:140px;
+    margin:0;
+    font-weight:bold;
+    flex-shrink:0;
+}
+
+.inline-field input,
+.inline-field select{
+    flex:1;
+    margin:0;
+}
 button{
     display:block;
     width:100%;
@@ -187,31 +205,33 @@ Thank you for taking the time to share your experience.
 
 
 <div class="inline-field">
-    <label for="name"><strong>Your Name</strong></label>
-<input type="text" id="name" name="name">
+    <label for="name"><strong>Your Name:</strong></label>
+    <input type="text" id="name" name="name">
 </div>
 
-<label for="email"><strong>Email Address</strong></label><br><br>
 
-<input type="email" id="email" name="email">
-<br><br>
+<div class="inline-field">
+    <label for="email"><strong>Email:</strong></label>
+    <input type="email" id="email" name="email">
+</div>
 
-<label for="book"><strong>Which book?</strong></label><br><br>
 
-<select id="book" name="book">
-<option value="">Select a book...</option>
-<option>Resilient Roots</option>
-<option>The Chair</option>
-<option>Starting Over</option>
-<option>Still Growing</option>
-<option>Rooted in Truth</option>
-<option>Miles From Home</option>
-<option>One Land, Two Sides</option>
-<option>Inherited Strength</option>
-<option>Other</option>
-</select>
+<div class="inline-field">
+    <label for="book"><strong>Book:</strong></label>
 
-<br><br>
+    <select id="book" name="book">
+        <option value="">Select a book...</option>
+        <option>Resilient Roots</option>
+        <option>The Chair</option>
+        <option>Starting Over</option>
+        <option>Still Growing</option>
+        <option>Rooted in Truth</option>
+        <option>Miles From Home</option>
+        <option>One Land, Two Sides</option>
+        <option>Inherited Strength</option>
+        <option>Other</option>
+    </select>
+</div>
 
 <label><strong>Star Rating</strong></label>
 

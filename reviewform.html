@@ -1,1 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Leave a Review | Halaina</title>
+
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<style>
+
+body{
+    margin:0;
+    font-family:Georgia,serif;
+    background:#f6f3ee;
+    color:#2d241c;
+}
+
+nav{
+    background:#241a14;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    font-size:1.1rem;
+}
+
+header{
+    background:#241a14;
+    color:white;
+    text-align:center;
+    padding:40px 20px;
+}
+
+header h1{
+    margin:0;
+    font-size:2.5rem;
+}
+
+.container{
+    max-width:800px;
+    margin:50px auto;
+    background:white;
+    padding:40px;
+    border-radius:12px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.intro{
+    text-align:center;
+    font-size:1.15rem;
+    line-height:1.8;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="books.html">Books</a>
+    <a href="where-to-buy.html">Where to Buy</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<header>
+    <h1>Share Your Thoughts</h1>
+</header>
+
+<div class="container">
+
+<div class="intro">
+
+<p>
+I'd love to hear from you.
+</p>
+
+<p>
+Whether you read <em>Resilient Roots</em>, <em>The Chair</em>, or another of my books, your thoughts help other readers discover stories they might not otherwise find.
+</p>
+
+<p>
+Thank you for taking the time to share your experience.
+</p>
+
+</div>
+
+
+<form id="reviewForm">
+
+
+<label for="name"><strong>Your Name</strong></label>
+<input type="text" id="name" name="name">
+<br><br>
+
+<label for="email"><strong>Email Address</strong></label><br><br>
+
+<input type="email" id="email" name="email">
+<br><br>
+
+<label for="book"><strong>Which book?</strong></label><br><br>
+
+<select id="book" name="book">
+<option value="">Select a book...</option>
+<option>Resilient Roots</option>
+<option>The Chair</option>
+<option>Starting Over</option>
+<option>Still Growing</option>
+<option>Rooted in Truth</option>
+<option>Miles From Home</option>
+<option>One Land, Two Sides</option>
+<option>Inherited Strength</option>
+<option>Other</option>
+</select>
+
+<br><br>
+
+<label for="rating"><strong>Star Rating</strong></label><br><br>
+
+<select id="rating" name="rating">
+    <option value="">Select a rating...</option>
+   <option value="5">⭐⭐⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="2">⭐⭐</option>
+<option value="1">⭐</option>
+</select>
+
+<br><br>
+
+<label for="review"><strong>Your Thoughts</strong></label><br><br>
+
+<textarea id="review" name="review" rows="10"></textarea>
+
+<br><br>
+
+<button type="submit">
+Submit Review
+</button>
+
+</form>
+
+  

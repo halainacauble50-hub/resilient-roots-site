@@ -179,6 +179,7 @@ const cols = row.split(',');
 if (!row.includes(',YES')) return;
 
 const name = cols[1] || '';
+  const rating = parseInt(cols[2]) || 5;
 const review = cols.slice(3, -1).join(',').replace(/,YES$/, '');
  
 

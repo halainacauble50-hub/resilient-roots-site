@@ -193,9 +193,9 @@ const review = cols.slice(3, -1).join(',').replace(/,YES$/, '');
             ${review}
           </div>
 
-          <div class="stars" style="text-align:center;">
-            ★★★★★ 5.0 Rating
-          </div>
+         <div class="stars" style="text-align:center;">
+  ${'★'.repeat(rating)}${'☆'.repeat(5 - rating)} ${rating}.0 Rating
+</div>
         </div>
       `;
     });

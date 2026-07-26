@@ -263,4 +263,78 @@ Submit Review
 
 </form>
 
-  
+<div id="thankYouMessage" style="display:none; text-align:center; padding:40px 20px;">
+
+<h2>Thank you for sharing your thoughts!</h2>
+
+<p>Your review has been received and will appear on my website after approval.</p>
+
+<p>Every review helps other readers discover stories they might not otherwise find.</p>
+
+<div style="margin-top:35px;">
+
+<a href="index.html"
+style="display:inline-block;padding:14px 28px;background:#8a6f4d;color:white;text-decoration:none;border-radius:6px;margin:10px;font-weight:bold;">
+Return Home
+</a>
+
+<a href="books.html"
+style="display:inline-block;padding:14px 28px;background:#241a14;color:white;text-decoration:none;border-radius:6px;margin:10px;font-weight:bold;">
+Browse My Books
+</a>
+
+<a href="https://preview.mailerlite.io/forms/2521142/193536424951154491/share"
+style="display:inline-block;padding:14px 28px;background:#b58a4a;color:white;text-decoration:none;border-radius:6px;margin:10px;font-weight:bold;">
+Join My Reader Circle
+</a>
+
+</div>
+
+</div>
+<script>
+const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzIG6_w7JsJXkPDevRXQUUBN6T-JCLwIWLj6REmh1CGGTHyVpOXvrUd01LPPgvZlUXM/exec';
+
+document.getElementById('reviewForm').addEventListener('submit', async function(e) {
+
+    e.preventDefault();
+
+    const form = e.target;
+
+    const formData = {
+        name: form.name.value,
+        email: form.email.value,
+        book: form.book.value,
+        rating: form.rating.value,
+        review: form.review.value
+    };
+
+    try {
+
+        const response = await fetch(WEB_APP_URL, {
+            method: 'POST',
+            mode: 'cors',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        if (!response.ok) {
+            throw new Error('Submission failed.');
+        }
+
+        form.style.display = 'none';
+        document.getElementById('thankYouMessage').style.display = 'block';
+
+    } catch (error) {
+
+        alert('Sorry, something went wrong. Please try again.');
+
+        console.error(error);
+
+    }
+
+});
+</script>
+</body>
+</html>

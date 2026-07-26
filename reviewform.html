@@ -98,6 +98,26 @@ textarea{
     resize:vertical;
     min-height:220px;
 }
+.star-rating{
+    display:flex;
+    gap:8px;
+    margin:15px 0 25px;
+    font-size:2.2rem;
+}
+
+.star{
+    cursor:pointer;
+    color:#cfcfcf;
+    transition:.2s;
+}
+
+.star.active{
+    color:#d4af37;
+}
+
+.star:hover{
+    color:#d4af37;
+}
 
 button{
     display:block;
@@ -193,17 +213,17 @@ Thank you for taking the time to share your experience.
 
 <br><br>
 
-<label for="rating"><strong>Star Rating</strong></label><br><br>
+<label><strong>Star Rating</strong></label>
 
-<select id="rating" name="rating">
-    <option value="">Select a rating...</option>
-   <option value="5">⭐⭐⭐⭐⭐</option>
-<option value="4">⭐⭐⭐⭐</option>
-<option value="3">⭐⭐⭐</option>
-<option value="2">⭐⭐</option>
-<option value="1">⭐</option>
-</select>
+<div class="star-rating">
+    <span class="star" data-value="1">&#9734;</span>
+    <span class="star" data-value="2">&#9734;</span>
+    <span class="star" data-value="3">&#9734;</span>
+    <span class="star" data-value="4">&#9734;</span>
+    <span class="star" data-value="5">&#9734;</span>
+</div>
 
+<input type="hidden" id="rating" name="rating">
 <br><br>
 
 <label for="review"><strong>Your Thoughts</strong></label><br><br>

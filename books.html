@@ -73,20 +73,39 @@ nav a {
 }
 
 header {
-    background: #3a2e25;
+    background: #241a14;
     color: white;
     text-align: center;
-    padding: 25px 20px;
+    padding: 30px;
 }
 
 header h1 {
     margin: 0;
-    font-size: 52px;
+    font-size: 48px;
 }
 
 @media (max-width: 900px) {
-    .hero h1 {
-        font-size: 38px;
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 14px;
+        padding: 12px 8px !important;
+    }
+
+    nav a {
+        margin: 0 !important;
+        font-size: 0.95rem !important;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 34px;
+        white-space: nowrap;
     }
 }
 

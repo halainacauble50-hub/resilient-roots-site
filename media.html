@@ -96,10 +96,51 @@ header h1 {
     max-width:1000px;
     margin:40px auto;
     padding:0 20px;
+}
 
+/* Meet Halaina Feature */
+
+.about-feature{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+    padding:35px;
+    margin-bottom:40px;
+}
+
+.about-photo{
+    width:280px;
+    height:auto;
+    border-radius:10px;
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    flex-shrink:0;
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h2{
+    margin-top:0;
+    color:#7a2e2e;
+    font-size:2rem;
+}
+
+.about-content p{
+    line-height:1.8;
+    margin-bottom:18px;
+}
+
+/* Event Cards */
+
+.media-grid{
     display:flex;
     gap:30px;
     justify-content:center;
+    align-items:flex-start;
     flex-wrap:wrap;
 }
 
@@ -123,6 +164,21 @@ header h1 {
     margin:0;
     border-radius:10px;
     box-shadow:0 15px 35px rgba(0,0,0,.18);
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .about-feature{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .about-photo{
+        width:220px;
+    }
+
 }
 @media (max-width:768px){
 
